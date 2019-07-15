@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    .base {
+        width: 100px;
+        height: 100px;
+    }
+
+    .active {
+
+        background-color: green;
+    }
+
+    .text-danger {
+        background-color: red;
+    }
+</style>
+<body>
+
+<!--此外，我们也可以在这里绑定返回对象的计算属性。这是一个常用且强大的模式：-->
+<div id="app3">
+    <div :class="classobject"></div>
+</div>
+<script>
+    var v3 = new Vue({
+        el: '#app3',
+        data: {
+            isactive: true,
+            error: {
+                value: true,
+                type: 'fatal'
+            }
+        },
+        computed: {
+            classobject: function () {
+                var obj = {};
+                obj.base = true;
+                obj.active = this.isactive && this.error.value;
+                obj['text-danger'] = this.error.value && this.error.type === 'fatal'
+                return obj;
+            }
+        }
+    });
+</script>
+</body>
+</html>

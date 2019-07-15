@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div :style="{color:c,fontSize: fonts+'px'}">菜鸟教程</div>
+</div>
+<script>
+    var v = new Vue({
+        el: '#app',
+        data: {
+            c: 'green',
+            fonts: 30
+        }
+    })
+</script>
+<div id="app2">
+    <div v-bind:style="styleObject">菜鸟教程</div>
+</div>
+<script>
+    new Vue({
+        el: '#app2',
+        data: {
+            styleObject: {
+                color: 'green',
+                fontSize: '30px'
+            }
+        }
+    })
+</script>
+<div id="app3">
+    <div v-bind:style="[baseStyles, overridingStyles]">菜鸟教程</div>
+</div>
+<script>
+    new Vue({
+        el: '#app3',
+        data: {
+            baseStyles: {
+                color: 'green',
+                fontSize: '30px'
+            },
+            overridingStyles: {
+                'font-weight': 'bold'
+            }
+        }
+    });
+</script>
+</body>
+</html>

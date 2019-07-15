@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #a {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+
+        #b {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!--阻止事件冒泡-->
+<div id="a" @click.stop="a">
+    <div id="b" @click.stop="b">
+        <a href="http://www.baidu.com" target="_blank">百度一下</a>
+    </div>
+</div>
+<script type="text/javascript">
+    var v = new Vue({
+        el: '#a',
+        methods: {
+            a: function () {
+                alert("a");
+            },
+            b: function () {
+                alert("b");
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li v-for="s in sites">
+            {{s.name}}
+        </li>
+
+    </ol>
+</div>
+
+<!--在模板中使用v-for -->
+<div id="app2">
+    <ul>
+        <template v-for="s in sites">
+            <li>{{s.name}}</li>
+        </template>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            sites: [{name: 'tom'},
+                {name: 'jack'},
+                {name: 'lili'},
+            ]
+        }
+    });
+    new Vue({
+        el: '#app2',
+        data: {
+            sites: [{name: 'tom'},
+                {name: 'jack'},
+                {name: 'lili'},
+            ]
+        }
+    })
+</script>
+<!-- v-for 迭代对象-->
+<div id="app3">
+    <ul>
+        <li v-for="value in object">
+            {{ value }}
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '#app3',
+        data: {
+            object: [{
+                name: '菜鸟教程',
+                url: 'http://www.runoob.com',
+                slogan: '学的不仅是技术，更是梦想！'
+            }, {
+                name: '菜鸟教程',
+                url: 'http://www.runoob.com',
+                slogan: '学的不仅是技术，更是梦想！'
+            }]
+        }
+    })
+</script>
+<!--你也可以提供第二个的参数为键名-->
+<div id="app4">
+    <ul>
+        <li v-for="(value,key,index) in object">
+            {{index}}\ {{key}}: {{value}}
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '#app4',
+        data: {
+            object: {
+                name: '菜鸟教程',
+                url: 'http://www.runoob.com',
+                slogan: '学的不仅是技术，更是梦想！'
+            }
+        }
+    })
+</script>
+<div id="app5">
+    <ul>
+        <li v-for="n in 10">
+            {{n}}
+        </li>
+    </ul>
+    <script>
+        new Vue({
+            el: '#app5'
+        })
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../05/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    这是插值测试 <p v-html="valueP"></p>
+</div>
+<div id="app2">
+    two: {{message}}
+</div>
+<script>
+<!--    2.0 v-html-->
+    var v=new Vue({
+        el:'#app',
+        data:{
+            valueP:"<h1 style='color: red'>pppppppppppppp</h1>"
+        }
+    });
+    var v2=new Vue({
+        el:'#app2',
+        data:{
+            message:"<h1 style='color: red'>mmmmmmmmmmmm</h1>"
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    .active {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+
+    .text-danger {
+        background-color: red;
+    }
+</style>
+<body>
+<!--样式绑定-->
+<div id="app">
+    <div :class="{'active':act,'text-danger':danger}"></div>
+</div>
+<!---->
+<script>
+    var v = new Vue({
+        el: '#app',
+        data: {
+            act: true,
+            danger: true
+        }
+    })
+</script>
+<!--绑定一个数据对象-->
+<div id="app2">
+    <div :class="classobject"></div>
+</div>
+<script>
+    var v2 = new Vue({
+        el: '#app2',
+        data: {
+            classobject: {
+                active: true,
+                "text-danger": true
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

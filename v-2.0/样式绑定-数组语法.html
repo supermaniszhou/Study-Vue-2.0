@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    .active {
+        width: 100px;
+        height: 100px;
+        background-color: #00cccc;
+    }
+
+    .text-danger {
+        background-color: #f9c81e;
+    }
+    .color{
+        background-color: #9325BC;
+    }
+</style>
+<body>
+<div id="app">
+    <div :class="[class1,class2]"></div>
+</div>
+<script>
+    var v = new Vue({
+        el: '#app',
+        data: {
+            class1: 'active',
+            class2: 'text-danger'
+        }
+    })
+</script>
+<div id="app2">
+    <div :class="[class3,class2 ? classact : '']"></div>
+</div>
+<script>
+    var v2 = new Vue({
+        el: '#app2',
+        data: {
+            class1: 'text-danger',
+            class3: 'active',
+            class2: false,
+            classact: 'color'
+        }
+    })
+</script>
+</body>
+</html>

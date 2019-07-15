@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p style="font-size: 25px;">计数器：{{counter}}</p>
+    <button @click="counter++" style="font-size: 25px">点击</button>
+</div>
+<script>
+    var v = new Vue({
+        el: '#app',
+        data: {
+            counter: 1
+        }
+    });
+    v.$watch("counter", function (newval, oldval) {
+        alert(newval + "=====" + oldval);
+    })
+</script>
+</body>
+</html>
