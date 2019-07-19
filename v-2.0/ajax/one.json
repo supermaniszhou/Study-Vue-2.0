@@ -1,0 +1,76 @@
+{
+  "data":{
+    "name":"网站",
+    "num":3,
+    "sites":[
+      {
+        "name":"Google",
+        "info":[
+          "Android",
+          "Google 搜索",
+          "Google 翻译"
+        ]
+      },
+      {
+        "name":"Runoob",
+        "info":[
+          "菜鸟教程",
+          "菜鸟工具",
+          "菜鸟微信"
+        ]
+      },
+      {
+        "name":"Taobao",
+        "info":[
+          "淘宝",
+          "网购"
+        ]
+      }
+    ]
+  },
+  "status":200,
+  "statusText":"OK",
+  "headers":{
+    "date":"Fri, 19 Jul 2019 07:41:12 GMT",
+    "via":"cache1.l2cn354[0,304-0,H], cache6.l2cn354[1,0], cache6.cn279[0,200-0,H], cache8.cn279[1,0]",
+    "age":"3420",
+    "x-cache":"HIT TCP_HIT dirn:0:177020338",
+    "x-swift-cachetime":"86400",
+    "x-swift-savetime":"Fri, 19 Jul 2019 07:57:47 GMT",
+    "content-length":"291",
+    "x-m-reqid":"5EQAAH63cZ4Kv7IV",
+    "x-m-log":"QNM:xs1175;QNM3/304",
+    "last-modified":"Fri, 24 May 2019 10:44:44 GMT",
+    "server":"Tengine",
+    "connection":"keep-alive",
+    "etag":""5ce7cb1c-123"",
+    "ali-swift-global-savetime":"1558704424",
+    "content-type":"application/json",
+    "cache-control":"max-age=86401",
+    "accept-ranges":"bytes",
+    "timing-allow-origin":"*",
+    "x-qnm-cache":"Hit",
+    "eagleid":"2aec23d015635254924034587e",
+    "expires":"Sat, 20 Jul 2019 07:41:13 GMT"
+  },
+  "config":{
+    "transformRequest":{
+
+    },
+    "transformResponse":{
+
+    },
+    "timeout":0,
+    "xsrfCookieName":"XSRF-TOKEN",
+    "xsrfHeaderName":"X-XSRF-TOKEN",
+    "maxContentLength":-1,
+    "headers":{
+      "Accept":"application/json, text/plain, */*"
+    },
+    "method":"get",
+    "url":"https://www.runoob.com/try/ajax/json_demo.json"
+  },
+  "request":{
+
+  }
+}

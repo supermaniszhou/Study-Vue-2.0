@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+    <script src="../vue-router.js"></script>
+    <script src="../axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="i in sites">{{i.name}}</li>
+    </ul>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                sites: null
+            }
+        },
+        mounted() {
+            axios.get("../ajax/two.json")
+                .then(response => this.sites = response.data.sites)
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+    });
+</script>
+
+</body>
+</html>
